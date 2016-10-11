@@ -1,10 +1,5 @@
 
-FROM hope/nodejs
+FROM 1and1internet/ubuntu-16-nginx-passenger-nodejs-6
 
-COPY . /src
-WORKDIR /src
+COPY . /var/www/
 RUN npm install
-
-EXPOSE  8080
-
-CMD ["npm", "start"]
